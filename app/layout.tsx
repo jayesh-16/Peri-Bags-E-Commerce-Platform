@@ -7,9 +7,24 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
+const getBaseUrl = () => {
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  return `http://localhost:${process.env.PORT || 3000}`;
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL(getBaseUrl()),
   title: "Peri Bags | Premium Bags & Backpacks",
   description: "Discover our premium collection of bags, backpacks, and travel frame. Crafted with quality and elegance.",
+  openGraph: {
+    title: "Peri Bags | Premium Bags & Backpacks",
+    description: "Discover our premium collection of bags, backpacks, and travel frame. Crafted with quality and elegance.",
+    url: getBaseUrl(),
+    siteName: 'Peri Bags',
+    locale: 'en_IN',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
