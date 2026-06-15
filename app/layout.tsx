@@ -9,10 +9,8 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 
 export const metadata: Metadata = {
   title: "Peri Bags | Premium Bags & Backpacks",
-  description: "Discover our premium collection of bags, backpacks, and travel gear. Crafted with quality and elegance.",
+  description: "Discover our premium collection of bags, backpacks, and travel frame. Crafted with quality and elegance.",
 };
-
-export const dynamic = "force-dynamic";
 
 export default function RootLayout({
   children,
