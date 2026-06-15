@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 14% 98%;      /* #FAFAF8 */
+    --foreground: 0 0% 10%;        /* #1A1A1A */
+    
+    --card: 0 0% 100%;             /* white */
+    --card-foreground: 0 0% 10%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    
+    --primary: 0 0% 17%;           /* #2C2C2C */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+    
+    --secondary: 35 21% 86%;       /* #E2DDD6 */
+    --secondary-foreground: 0 0% 10%;
+    
+    --muted: 38 31% 94%;           /* #F4F1EC */
+    --muted-foreground: 0 0% 42%;  /* #6B6B6B */
+    
+    --accent: 27 45% 60%;          /* #C8956C */
+    --accent-foreground: 0 0% 100%;/* #FFFFFF */
+    
+    --destructive: 0 72% 51%;      /* #DC2626 */
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 35 21% 86%;          /* #E2DDD6 */
+    --input: 35 21% 86%;
+    --ring: 0 0% 17%;
+    
+    --radius: 0.5rem;
+  }
+
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 60 14% 98%;
+    
+    --card: 0 0% 14%;
+    --card-foreground: 60 14% 98%;
+    
+    --popover: 0 0% 14%;
+    --popover-foreground: 60 14% 98%;
+    
+    --primary: 60 14% 98%;
+    --primary-foreground: 0 0% 10%;
+    
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 60 14% 98%;
+    
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
+    
+    --accent: 27 45% 60%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 60 14% 98%;
+    
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 60 14% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Utilities for Animations and Shadows */
+@layer utilities {
+  .shadow-card {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  }
+  .shadow-hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  }
+  .shadow-modal {
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  }
+  
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-scrolled {
+    backdrop-filter: blur(20px);
+    background-color: rgba(249, 249, 247, 0.85);
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+    border-bottom: 1px solid rgba(226, 221, 214, 0.4);
+  }
+
+  .tracking-widest-plus {
+    letter-spacing: 0.15em;
+  }
+
+  .btn-magnetic {
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .btn-magnetic:hover {
+    transform: scale(1.02) translateY(-2px);
+  }
+
+  .editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 20;
+    -webkit-font-smoothing: antialiased;
+  }
+}
