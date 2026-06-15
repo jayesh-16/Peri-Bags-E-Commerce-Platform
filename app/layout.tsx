@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   description: "Discover our premium collection of bags, backpacks, and travel gear. Crafted with quality and elegance.",
 };
 
+export const dynamic = "force-dynamic";
+
 export default function RootLayout({
   children,
 }: Readonly<{
