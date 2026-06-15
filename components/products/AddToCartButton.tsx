@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/hooks/use-cart';
 import { useToast } from '@/hooks/use-toast';
-import { Product, ProductImage } from '@prisma/client';
+import type { Product, ProductImage } from '@prisma/client';
 import { ShoppingBag } from 'lucide-react';
 
 interface AddToCartButtonProps {

@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { Product, ProductImage } from '@prisma/client';
+import type { Product, ProductImage } from '@prisma/client';
 
 export type CartItem = {
   product: Product & { images: ProductImage[] };
